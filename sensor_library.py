@@ -25,14 +25,12 @@ class Camera:
     # With an actual camera, the OpenCV libraries should be used:
     #
     # camera = cv2.VideoCapture(0)
-    #
     # while(True):
-    #     # frame-wise capture
-    #     ret, frame = camera.read()
+    #   ret, frame = camera.read()
 
     def get_camera_data(self, x, y):
         rows, col = x, y  # number of rows and columns per image
-        return np.random.randint(256, size=(3, rows, col))
+        return np.random.randint(256, size=(rows, col))
 
 
 class Speedometer:
@@ -84,4 +82,5 @@ class IMU:
 
     # simulates [a_x, a_y, a_z, g_x, g_y, g_z]
     def get_IMU_data(self):
-        return np.random.uniform(low=-1.0, high=1.0, size=(1, 6))
+        imu_values = np.random.uniform(low=-1.0, high=1.0, size=(1, 6))
+        return imu_values[0].tolist()    # [0] is to undo the effect of an extra set of [] introduced by previous line

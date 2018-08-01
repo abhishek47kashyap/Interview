@@ -80,10 +80,7 @@ try:
 
         time_stamp = time_stamp + 1
 
-        if time_stamp >= 11:
-            print x
-            print y
-            break
+
 
         # print time_stamp
 
