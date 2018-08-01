@@ -7,7 +7,7 @@
 **To run the program:**<br/>
 - Python version: 2.7.12<br/>
 - IDE: PyCharm<br/>
-Have both `sensor_logging.py` and `sensor_library.py` in the same folder. Fire up your terminal, go to the folder where you stored the files, and type `python sensor_logging.py`.
+- Have both `sensor_logging.py` and `sensor_library.py` in the same folder. Fire up your terminal, go to the folder where you stored the files, and type `python sensor_logging.py`.
 
 **PROBLEMS with `sensor_logging.py`:**
 - If the `pyplot` figure objects are used to visually represent data, hitting the 'Stop' button is not interpreted as `KeyboardInterrupt`, resulting in the Encoder, GPS, and IMU sensors not dumping their readings into .csv files. <br/>Commenting out the lines `fig_lidar.canvas.draw()` in the section `# Lidar readings`, `fig_speedometer.canvas.draw()` in `# Speedometer readings`, and `plt.imshow(front_camera.get_camera_data(256, 256))` followed by `plt.axis('off')` in `# Camera readings` allows the .csv files to be created successfully.
