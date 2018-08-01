@@ -1,8 +1,8 @@
 ## Interview
 
-`sensor_logging.py` is the main sensor platform which imports `sensor_library.py` which has classes for commonly used sensors in self-driving cars: LiDAR, Camera, Wheel Position Encoders, GPS, IMU.`sensor_logging.py` publishes LiDAR, Camera, and Speedometer readings to `pyplot` figures and the Positions Encoders, GPS, and IMU readings to .csv files. A total of 3 .csv files are created: *gps_readings.csv*, *imu_readings.csv*, and *wheel_encoder_readings.csv*.
+`sensor_logging.py` is the main sensor platform which imports `sensor_library.py` which has classes for commonly used sensors in self-driving cars: LiDAR, Camera, Wheel Position Encoders, GPS, IMU.`sensor_logging.py` publishes LiDAR, Camera, and Speedometer readings to `pyplot` figures and the Positions Encoders, GPS, and IMU readings to .csv files. A total of 3 .csv files are generated: *gps_readings.csv*, *imu_readings.csv*, and *wheel_encoder_readings.csv*.
 
-`time_stamp` is not preserved for the sensors dumping their values into csv files as the row numbers themselves correspond to the time instances. The sole purpose of `time_stamp` is to visualize data in "real-time".
+`time_stamp` is not preserved for the sensors dumping their values into csv files as the row numbers themselves correspond to the time instances. The purpose of `time_stamp` is to visualize data in "real-time".
 
 **To run the program:**<br/>
 - Python version: 2.7.12<br/>
